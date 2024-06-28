@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="company-logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeb_Uv1XdcodqW_pWKGUp8oJyjftcPBJpZIX4DsrBxiUpBOnzQuX4cscTrpunv4ExBoZI&usqp=CAU"
+                width="50px" height="50px">
+            <a href="/">logo</a> <!-- Assuming this should go to the home page -->
+        </div>
+        <div class="profile">
+            <a href="/addUser"><img src="/add-friend.png" alt="Add User" class="nav-links">AddUser</a>
+            <a href="/index"><img src="/home.png" alt="home" styles="margin-top:20px" class="nav-links">Home</a>
+
+            <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4g6Wz-l87P2wTmFAQpdqYIcF3qocvBvyJUw&s"
+                    width="50px" height="50px" class="profilePic"></a>
+            <span>
+                <%= username %>
+            </span>
+        </div>
+    </nav>
+
+    <h1>Student List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Fee</th>
+            <th>Action</th>
+        </tr>
+        <% students.forEach(student=> { %>
+            <tr>
+                <td>
+                    <%= student.sId %>
+                </td>
+                <td>
+                    <%= student.sName %>
+                </td>
+                <td>
+                    <%= student.sDept %>
+                </td>
+                <td>
+                    <%= student.sFee %>
+                </td>
+                <td class="btns">
+                    <form action="/edit" method="GET">
+                        <input type="hidden" name="id" value="<%= student.sId %>">
+                        <button type="submit" id="edit" style="background-color: #1a0c52;" name="edit">
+                            <img src="/edit.png" width="16px" height="16px">Edit
+                        </button>
+                    </form>
+
+                    <form action="/delete/<%= student.sId %>" method="POST">
+                        <button type="submit" name="delete" style="background-color: rgb(229, 40, 40);">
+                            <img src="/delete.png" width="16px" height="16px">Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+
+</body>
+
+</html>

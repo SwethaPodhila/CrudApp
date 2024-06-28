@@ -1,0 +1,84 @@
+/* edit.css */
+
+/* Body styles */
+body {
+    background-color: #f0f0f0;
+}
+
+/* Form container styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #1a0c52; /* Background color for the entire nav */
+    color: #fff; /* Text color for links and other text */
+    padding: 6px 50px; /* Padding inside the nav */
+    display: flex; /* Flexbox layout for positioning items */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically */
+}
+
+nav img {
+    max-width: 100%; /* Ensure images don't overflow */
+    vertical-align: middle; /* Align images vertically */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Text color for links */
+    margin-left: 15px; /* Spacing between links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.nav-links{
+   margin-top:0px;
+}
+
+.company-logo img, .profilePic{
+  border-radius: 50%;
+}
+
+/* Label styles */
+label {
+    font-weight: bold;
+}
+
+/* Input styles */
+input[type=text] {
+    width: calc(100% - 20px); /* Adjust input width */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styles */
+button[type=submit] {
+    width: calc(100% - 20px);
+    background-color: #1a0c52;;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type=submit]:hover {
+    background-color: #1a0c52;;
+}

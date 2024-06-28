@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="/addUser.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="company-logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeb_Uv1XdcodqW_pWKGUp8oJyjftcPBJpZIX4DsrBxiUpBOnzQuX4cscTrpunv4ExBoZI&usqp=CAU"
+                width="50px" height="50px">
+            <a href="/">logo</a> <!-- Assuming this should go to the home page -->
+        </div>
+        <div class="profile">
+            <a href="/addUser"><img src="/add-friend.png" alt="Add User" class="nav-links">AddUser</a>
+            <a href="/index"><img src="/home.png" alt="home" styles="margin-top:20px" class="nav-links">Home</a>
+            <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4g6Wz-l87P2wTmFAQpdqYIcF3qocvBvyJUw&s"
+                    width="50px" height="50px" class="profilePic"></a>
+            <span>
+                <%= username %>
+            </span>
+        </div>
+    </nav>
+
+    <h1>Add User</h1>
+    <form action="/addUser" method="POST"> <!-- Updated action URL -->
+        <input type="text" id="sId" name="sId" placeholder="id number" required><br>
+        <input type="text" id="sName" name="sName" placeholder="Name" required><br>
+        <input type="text" id="sDept" name="sDept" placeholder="Department" required><br>
+        <input type="text" id="sFee" name="sFee" placeholder="Fee" required><br>
+        <button type="submit">Add User</button>
+    </form>
+</body>
+
+</html>
